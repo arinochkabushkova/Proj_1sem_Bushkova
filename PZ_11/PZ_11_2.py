@@ -1,0 +1,12 @@
+file = open('text18-4.txt', 'r')
+data = file.read()
+print(data)
+print(f'Количество букв: {sum([1 for i in data if i.isalpha()])}')
+file.close()
+
+f = open('text18-4.txt', 'r')
+data = f.read()
+f.close()
+f = open('text18-4_lower.txt', 'w')
+f.writelines(data.lower())
+f.close()
